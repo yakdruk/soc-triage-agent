@@ -8,7 +8,7 @@ All data here is synthetic. Invented hosts, invented logs, nothing real.
 
 ![The agent being hijacked by a log line, then the same alert with the tool response screened at the gateway](demo.gif)
 
-*Left to itself the agent suppresses a live intrusion. Screened at the gateway, the same alert comes back critical.*
+*Left to itself the agent suppresses a live intrusion. Screened at the gateway, the same alert comes back critical. Recorded on `gemini-3.1-flash-lite`; the transcripts quoted below are from the original run on `gemini-2.5-flash` via Vertex AI, so the wording differs.*
 
 ## The short version
 
