@@ -6,6 +6,10 @@ conversation it arrived in.
 
 All data here is synthetic. Invented hosts, invented logs, nothing real.
 
+![The agent being hijacked by a log line, then the same alert with the tool response screened at the gateway](demo.gif)
+
+*Left to itself the agent suppresses a live intrusion. Screened at the gateway, the same alert comes back critical.*
+
 ## The short version
 
 The agent takes a security alert, enriches it through tools, scores severity and

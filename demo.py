@@ -175,5 +175,9 @@ if __name__ == "__main__":
     clean_args = [a for a in sys.argv[1:] if a != "--a2ui"]
     selected_beats = {int(a) for a in clean_args if a.isdigit()}
     model_name = os.environ.get("MODEL", "gemini-2.5-flash")
-    print(f"{DIM}Running against Vertex AI | project: {os.environ.get('GOOGLE_CLOUD_PROJECT')} | model: {model_name}{OFF}")
+    if os.environ.get("GOOGLE_GENAI_USE_VERTEXAI", "").upper() == "TRUE":
+        backend = f"Vertex AI | project: {os.environ.get('GOOGLE_CLOUD_PROJECT', '(unset)')}"
+    else:
+        backend = "Gemini API"
+    print(f"{DIM}Running against {backend} | model: {model_name}{OFF}")
     asyncio.run(main(selected_beats, model_name, a2ui=a2ui_enabled))
